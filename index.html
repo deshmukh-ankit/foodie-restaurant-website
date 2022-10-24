@@ -15,45 +15,134 @@
 </head>
 
 <body>
+    <!-- hero section start -->
     <div class="container-fluid hero-image">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
                 <a class="navbar-brand py-1 px-3" href="#">
                     Foodie
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link mx-3 active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">About Us</a>
+                            <a class="nav-link mx-3" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Reservation</a>
+                            <a class="nav-link mx-3" href="#">Reservation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Menu</a>
+                            <a class="nav-link mx-3" href="#">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2" href="#">Contact Us</a>
+                            <a class="nav-link mx-3" href="#">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container text-center">
+        <div class="container hero-caption text-center text-light">
             <h2 class="h2">Foodie Restaurant</h2>
-            <h4 class="h4">Bliss on a plate</h4>
+            <h4 class="h4 ">Bliss on a plate</h4>
         </div>
     </div>
+    <!-- hero section end -->
 
+    <!-- about section start -->
+    <div class="container-fluid text-center">
+        <div class="container col-8 text-justify p-5">
+            <p class="text">
+                Foodie specializes in delicious food featuring fresh ingredients and masterful preparation by the
+                Foodie's
+                culinary team. Whether you're ordering a multi-course meal or grabbing a drink and pizza at the bar,
+                Foodie lively, casual yet upscale atmosphere makes it perfect for dining with friends, family, clients
+                and business associates.
+            </p>
+        </div>
+    </div>
+    <!-- about section end -->
 
+    <!-- main carousel start -->
+    <div id="carouselMain" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/slider1.jpg" class="d-block w-100" alt="slider-1">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/slider2.jpg" class="d-block w-100" alt="slider-2">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/slider3.jpg" class="d-block w-100" alt="slider-3">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/slider4.jpg" class="d-block w-100" alt="slider-4">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/slider5.jpg" class="d-block w-100" alt="slider-5">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- main carousel end -->
+
+    <!-- contact section start -->
+    <div class="container-fluid p-2 contact-section">
+        <div class="container m-auto row">
+            <div class="col-md-4 g-2">
+                <h2 class="h2 py-2">Find Us Here</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14851.60396996465!2d80.19323879999999!3d21.472401100000013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70fbd549a338a255!2sHappy%20Street!5e0!3m2!1sen!2sin!4v1666198798316!5m2!1sen!2sin"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-md-4 g-2">
+                <h2 class="h2 py-2">Opening Times</h2>
+                <span>Mon-Fri: 11.00 am to 11.00 pm</span><br>
+                <span>Sat-Sun: 10.00 am to 12.00 midnight</span>
+            </div>
+            <div class="col-md-4">
+                <h2 class="h2 py-2">Contact</h2>
+                <Span>+91 234567890</Span><br>
+
+                <h2 class="h2 pt-3">Address</h2>
+                <Span>#09,<br>The Happy Street,<br>Gondia. 441601</Span><br>
+                <span>Email: www.foodie@gmail.com</span>
+            </div>
+        </div>
+    </div>
+    <!-- contact section end -->
+
+    <!-- footer start -->
+    <footer class="container-fluid bg-dark">
+        <div class="container row py-3">
+            <div class="col-4">
+                <i class="fab ms-1 fa-facebook-square p-1"></i></i><i class="fab ms-1 fa-twitter-square p-1"></i><i
+                    class="fab ms-1 fa-instagram p-1"></i><i class="fab ms-1 fa-youtube p-1"></i>
+            </div>
+            <div class="col-8 caption">
+                <span class="h4">“The only thing better than our food is our service.”</span>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid row text-center footer-bottom">
+            <span class="m-1">&copy;All Rights Reserved.2022.</span>
+        </div>
+    </footer>
+    <!-- footer end -->
 
     <!-- bootstrap js -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>

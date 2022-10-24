@@ -1,6 +1,124 @@
-.hero-image{
+body {
+    background: rgb(211, 241, 252);
+}
+
+.navbar {
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand {
+    font-family: 'Segoe Script';
+    font-weight: 900;
+    font-size: 2.8vw;
+    background: -webkit-linear-gradient(0deg, red, purple, blue, green, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+@media only screen and (min-width: 10px) and (max-width: 720px) {
+    .navbar-brand {
+        font-size: 6vw;
+    }
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: rgb(25, 0, 0);
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.navbar-nav .active {
+    text-shadow: 1px 1px white;
+}
+
+.hero-image {
     background-image: url(img/restaurant-lobby.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 35rem;
+}
+
+.hero-caption {
+    z-index: 0;
+    margin-top: 12vw;
+}
+
+.hero-caption .h2 {
+    font-size: 6vw;
+    color: tomato;
+    text-shadow: 1px 1px black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hero-caption .h4 {
+    font-weight: 400;
+    font-size: 2vw;
+    color: aqua;
+    text-shadow: 1px 1px black;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.text {
+    font-size: 2vw;
+    text-align: justify;
+}
+
+#carouselMain .carousel-inner {
+    height: 45vw;
+}
+.contact-section .h2{
+    font-size: 2vw;
+    color: tomato;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+iframe{
+    height: 25vw;
+    width: 25vw;
+}
+.contact-section span{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.6vw;
+}
+.fab{
+    font-size: 2.5vw;
+}
+.fa-facebook-square{
+    color: blue;
+    background-color: white;
+    border-radius: 3px;
+}
+.fa-twitter-square{
+    color: skyblue;
+    background-color: white;
+    border-radius: 3px;
+}
+.fa-instagram{
+    color: white;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+}
+.fa-youtube{
+    color: white;
+    background-color: red;
+    border-radius: 3px;
+}
+.caption .h4{
+    color: white;
+    font-size: 2vw;
+}
+
+.footer-bottom span{
+    font-size: 1.4vw;
+    color: white;
+}
+hr{
+    color: white;
 }
