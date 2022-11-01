@@ -1,10 +1,10 @@
 body {
-    background: rgb(211, 241, 252);
+    background: -webkit-linear-gradient(45deg, #7F7FD5, #86A8E7, #91EAE4);
 }
 
 .navbar {
     border-radius: 1vw;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(208, 246, 255);
 }
 
 .navbar-brand {
@@ -35,7 +35,7 @@ body {
 }
 
 .navbar-nav .active {
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px rgb(255, 181, 168);
 }
 
 .hero-image {
@@ -71,57 +71,198 @@ body {
     text-align: justify;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 #carouselMain .carousel-inner {
     height: 45vw;
 }
-.contact-section .h2{
+
+.contact-section .h2 {
     font-size: 2vw;
     color: tomato;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-iframe{
+
+iframe {
     height: 25vw;
     width: 25vw;
 }
-.contact-section .container{
+
+.contact-section .container {
     background-color: #ffd8b9;
 }
-.contact-section span{
+
+.contact-section span {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.6vw;
 }
-.fab{
+
+.fab {
     font-size: 2.5vw;
 }
-.fa-facebook-square{
+
+.fa-facebook-square {
     color: blue;
     background-color: white;
     border-radius: 3px;
 }
-.fa-twitter-square{
+
+.fa-twitter-square {
     color: skyblue;
     background-color: white;
     border-radius: 3px;
 }
-.fa-instagram{
+
+.fa-instagram {
     color: white;
     border-radius: 3px;
-    background: -webkit-linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    background: -webkit-linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
-.fa-youtube{
+
+.fa-youtube {
     color: white;
     background-color: red;
     border-radius: 3px;
 }
-.caption .h4{
+
+.caption .h4 {
     color: white;
     font-size: 2vw;
 }
 
-.footer-bottom span{
+.footer-bottom span {
     font-size: 1.4vw;
     color: white;
 }
-hr{
+
+hr {
     color: white;
+}
+
+.card-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (min-width: 992px) {
+    .card-text {
+        font-size: 1.4vw;
+    }
+}
+
+.about-card {
+    background-color: rgba(255, 192, 181, 0.4);
+}
+
+.about-card .card-title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 0, 0);
+}
+
+.reservation-form {
+    background-image: url(img/reservation-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 98vw;
+}
+
+.btn-primary {
+    width: 20vw;
+}
+
+.reservation-form .container-fluid {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.reservation-form label {
+    color: white;
+    margin-left: 25vw;
+}
+
+.reservation-form h4 {
+    color: #fa7e1e;
+    margin-left: 20vw;
+    text-shadow: 1px 1px black;
+}
+
+.reservation-form span {
+    color: white;
+    margin-left: 20vw;
+}
+
+.reservation-form input {
+    padding: 2px;
+    width: 20vw;
+}
+
+.btn[aria-expanded="true"] {
+    background-color: white;
+    background: -webkit-linear-gradient(180deg, #a8c0ff, #3f2b96);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: large;
+}
+
+.btn[aria-expanded="false"] {
+    background: -webkit-linear-gradient(180deg, #a8c0ff, #3f2b96);
+    color: White;
+}
+
+#collapseOne {
+    background-image: url(img/starters-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+#collapseTwo {
+    background-image: url(img/main-course-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+#collapseThree {
+    background-image: url(img/desserts-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+#collapseFour {
+    background-image: url(img/drinks-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.contact-hero {
+    background-image: url(img/blur-restaurant-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vw;
+    color: white;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+.contact-form label span {
+    color: red;
+}
+.contact-form input {
+    width: 20vw;
+}
+
+.contact-form .submit {
+    width: 10vw !important;
+    color: white;
+    background-color: #2d2dff;
+    padding: 3px;
+    border-radius: 5px;
 }
