@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Restaurant</title>
+    <!-- favicon link -->
+    <link rel="icon" type="image/png" href="img/site_favicon.zip" sizes="16x16">
+    <link rel="icon" type="image/png" href="img/site_favicon.zip" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/site_favicon.zip" sizes="96x96">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- hero section start -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand py-1 px-3" href="index.html">
+                    Foodie
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link mx-3" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-3" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-3 active" href="reservation.html">Reservation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-3" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-3" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- hero section end -->
+
+    <!-- reservation form starts -->
+    <div class="container-fluid m-auto reservation-form">
+        <div class="container-fluid py-5">
+            <h4 class="h4">Reserve Table</h4>
+            <span>Please fill the form accurately to enable us serve you better! Welcome!</span>
+            <form action="" method="post">
+                <div class="row m-3">
+                    <h4 class="h5">Personel Information</h4>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="f_name">Full Name :</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="f_name" placeholder="Name Lastname" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="email">Email :</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="email" placeholder="example@email.com" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="phone">Phone no :</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="phone" placeholder="1234567890" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="n_guest"># of Guest :</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="n_guest" placeholder="2" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <h4 class="h5">Reservation</h4>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="date">Date :</label>
+                    </div>
+                    <div class="col">
+                        <input type="date" name="date">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="time">Time :</label>
+                    </div>
+                    <div class="col">
+                        <input type="time" name="time" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="r_type">Reservation Type :</label>
+                    </div>
+                    <div class="col">
+                        <select id="r_type" name="r_type" size="1">
+                            <option value="Dinner">Dinner</option>
+                            <option value="VIP/Mezzanine">VIP/Mezzanine</option>
+                            <option value="Birthday/Anniversary">Birthday/Anniversary</option>
+                            <option value="Nightlife">Nightlife</option>
+                            <option value="Private">Private</option>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Corporate">Corporate</option>
+                            <option value="Holiday">Holiday</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+                        <label for="other">if other please specify :</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="other" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <div class="col">
+
+                        <label for="request">Any special requests :</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="request" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row d-md-flex justify-content-md-center">
+                    <input type="submit" value="Submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- reservation form ends -->
+
+    <!-- footer start -->
+    <footer class="container-fluid bg-dark">
+        <div class="container row py-3">
+            <div class="col-4">
+                <i class="fab ms-1 fa-facebook-square p-1"></i></i><i class="fab ms-1 fa-twitter-square p-1"></i><i
+                    class="fab ms-1 fa-instagram p-1"></i><i class="fab ms-1 fa-youtube p-1"></i>
+            </div>
+            <div class="col-8 caption">
+                <span class="h4">“The only thing better than our food is our service.”</span>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid row text-center footer-bottom">
+            <span class="m-1">&copy;All Rights Reserved.2022.</span>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- bootstrap js -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
