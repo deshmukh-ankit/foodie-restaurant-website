@@ -35,13 +35,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link mx-3" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link mx-3" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-3" href="about.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-3 active" href="reservation.html">Reservation</a>
+                            <a class="nav-link mx-3 active" aria-current="page" href="reservation.html">Reservation</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-3" href="menu.html">Menu</a>
@@ -61,16 +61,16 @@
         <div class="container-fluid py-5">
             <h4 class="h4">Reserve Table</h4>
             <span>Please fill the form accurately to enable us serve you better! Welcome!</span>
-            <form action="" method="post">
+            <form id="reservationForm" method="post">
                 <div class="row m-3">
                     <h4 class="h5">Personel Information</h4>
                 </div>
                 <div class="row m-3">
                     <div class="col">
-                        <label for="f_name">Full Name :</label>
+                        <label for="name">Full Name :</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="f_name" placeholder="Name Lastname" autocomplete="off">
+                        <input type="text" id="name" name="name" placeholder="Name" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="row m-3">
@@ -78,23 +78,23 @@
                         <label for="email">Email :</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="email" placeholder="example@email.com" autocomplete="off">
+                        <input type="text" id="email" name="email" placeholder="example@email.com" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col">
-                        <label for="phone">Phone no :</label>
+                        <label for="phone_no">Phone no :</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="phone" placeholder="1234567890" autocomplete="off">
+                        <input type="text" id="phone_no" name="phone_no" placeholder="1234567890" autocomplete="off">
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col">
-                        <label for="n_guest"># of Guest :</label>
+                        <label for="n_of_guest"># of Guest :</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="n_guest" placeholder="2" autocomplete="off">
+                        <input type="text" id="n_of_guest" name="n_of_guest" placeholder="2" autocomplete="off">
                     </div>
                 </div>
                 <div class="row m-3">
@@ -105,7 +105,7 @@
                         <label for="date">Date :</label>
                     </div>
                     <div class="col">
-                        <input type="date" name="date">
+                        <input id="date" type="date" name="date">
                     </div>
                 </div>
                 <div class="row m-3">
@@ -113,15 +113,15 @@
                         <label for="time">Time :</label>
                     </div>
                     <div class="col">
-                        <input type="time" name="time" autocomplete="off">
+                        <input id="time" type="time" name="time" autocomplete="off">
                     </div>
                 </div>
                 <div class="row m-3">
                     <div class="col">
-                        <label for="r_type">Reservation Type :</label>
+                        <label for="reservation_type">Reservation Type :</label>
                     </div>
                     <div class="col">
-                        <select id="r_type" name="r_type" size="1">
+                        <select id="reservation_type" name="reservation_type" size="1">
                             <option value="Dinner">Dinner</option>
                             <option value="VIP/Mezzanine">VIP/Mezzanine</option>
                             <option value="Birthday/Anniversary">Birthday/Anniversary</option>
@@ -139,7 +139,7 @@
                         <label for="other">if other please specify :</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="other" autocomplete="off">
+                        <input id="reservation_type" type="text" name="other" autocomplete="off">
                     </div>
                 </div>
                 <div class="row m-3">
@@ -148,7 +148,7 @@
                         <label for="request">Any special requests :</label>
                     </div>
                     <div class="col">
-                        <input type="text" name="request" autocomplete="off">
+                        <input type="text" id="special_req" name="request" autocomplete="off">
                     </div>
                 </div>
                 <div class="row d-md-flex justify-content-md-center">
@@ -179,6 +179,36 @@
 
     <!-- bootstrap js -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- form input javascript -->
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone_no: document.getElementById('phone_no').value,
+                n_of_guest: document.getElementById('n_of_guest').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                reservation_type: document.getElementById('reservation_type').value,
+                special_req: document.getElementById('special_req').value
+            };
+
+            fetch('/api/reservations', {
+                method: 'POST',
+                body: JSON.stringify(formData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                });
+        });
+
+    </script>
 </body>
 
 </html>
